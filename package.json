@@ -152,7 +152,9 @@
     "compile": "tsc -watch -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "package": "vsce package",
-    "travis-deploy": "vsce publish -p $VS_TOKEN"
+    "travis-deploy": "vsce publish -p $VS_TOKEN",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@types/node": "^10.12.18",
@@ -169,6 +171,8 @@
     "vscode": "^1.1.26"
   },
   "dependencies": {
-    "vscode-languageclient": "^5.2.1"
-  }
+    "vscode-languageclient": "^5.2.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
