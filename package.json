@@ -156,7 +156,7 @@
   },
   "devDependencies": {
     "@types/node": "^10.12.18",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-bump": "^3.1.1",
     "gulp-git": "^2.8.0",
     "gulp-shell": "^0.6.5",
